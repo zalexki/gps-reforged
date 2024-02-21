@@ -1,0 +1,8 @@
+GameProject {
+ ID "GPSReforged"
+ GUID "60AAF0CB12C4FB2F"
+ TITLE "GPS Reforged"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}
