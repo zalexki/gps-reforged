@@ -1,0 +1,5 @@
+MatPBRBasic {
+ BCRMap "{197415FDBCE1E45F}Data/console.edds"
+ DetailNormalMapUVTransform MatUVTransform "{60B89C81696CB24F}" {
+ }
+}
