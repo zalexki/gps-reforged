@@ -2,6 +2,8 @@
 class GPS_SCR_PlayerGPSHandlerComponentClass : ScriptComponentClass{};
 class GPS_SCR_PlayerGPSHandlerComponent : ScriptComponent
 {
+	protected SCR_PlayerController m_playerController;
+	protected SCR_MapEntity m_mapEntity;
 	protected Widget m_GpsWidget;
 
 	void ~GPS_SCR_PlayerGPSHandlerComponent()
@@ -16,7 +18,7 @@ class GPS_SCR_PlayerGPSHandlerComponent : ScriptComponent
 		SetEventMask(owner, EntityEvent.INIT);
 		owner.SetFlags(EntityFlags.ACTIVE, true);
 
-		SCR_MapEntity m_mapEntity = SCR_MapEntity.GetMapInstance();
+		m_mapEntity = SCR_MapEntity.GetMapInstance();
 
 		m_mapEntity.GetOnMapOpen().Insert(OnPlayerMapOpen);
 		m_mapEntity.GetOnMapClose().Insert(OnPlayerMapClose);

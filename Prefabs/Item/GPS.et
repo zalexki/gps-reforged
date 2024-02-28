@@ -1,0 +1,54 @@
+GenericEntity {
+ ID "60B903930FF89358"
+ components {
+  InventoryItemComponent "{60B9039EAC5CE277}" {
+   Attributes SCR_ItemAttributeCollection "{60B9039ECBFAE66F}" {
+    ItemDisplayName UIInfo "{60B9039EC6AFC56D}" {
+     Name "GPS"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{60B9039EFE3BF405}" {
+     Weight 0.05
+     SizeSetupStrategy Manual
+     ItemDimensions 4 4 4
+     ItemVolume 10
+     DimensionScaler 1
+     RestingAdditiveRotationLS 0 0 0
+     RestingAdditiveOffsetLS 0 0 0
+    }
+    CommonItemType "WATCH"
+    m_Size SLOT_1x1
+    m_SlotType SLOT_GADGETS_STORAGE
+   }
+   WbPlacementFromAttributes 1
+  }
+  MeshObject "{60B90393F1664DBC}" {
+   Object "{21E28AEE1571FD86}Art/GPS/gps.xob"
+  }
+  RigidBody "{60B90393F5078165}" {
+  }
+  ActionsManagerComponent "{60B9039F661ECBC2}" {
+   ActionContexts {
+    UserActionContext "{60B9039F612C99CB}" {
+     ContextName "default"
+     Position PointInfo "{60B9039C896B82A6}" {
+     }
+    }
+   }
+   additionalActions {
+    SCR_PickUpItemAction "{60B9039CAD505046}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{60B9039CD8389AEE}" {
+      Name "#AR-Inventory_PickUp"
+     }
+    }
+   }
+  }
+  RplComponent "{60B9039C17276546}" {
+  }
+  Hierarchy "{60B9039C13F5676A}" {
+  }
+ }
+ coords 138.13 6.162 130.922
+}

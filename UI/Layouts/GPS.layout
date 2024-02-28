@@ -6,20 +6,20 @@ FrameWidgetClass {
    Name "OverlayRoot"
    Slot FrameWidgetSlot "{60B903B865D673C8}" {
     Anchor 1 1 1 1
-    PositionX -353.566
-    OffsetLeft -353.6
-    PositionY -270.401
-    OffsetTop -270.4
+    PositionX -300
+    OffsetLeft -300
+    PositionY -200
+    OffsetTop -200
     SizeX 1927.51
-    OffsetRight -1573.9
+    OffsetRight -1627.5
     SizeY 1075.27
-    OffsetBottom -804.9
+    OffsetBottom -875.3
     SizeToContent 1
    }
    {
     ImageWidgetClass "{60B903A65414506C}" {
      Name "Background0"
-     Slot OverlayWidgetSlot {
+     Slot OverlayWidgetSlot "{60B903ABCEE5E39C}" {
       HorizontalAlign 3
       VerticalAlign 3
      }
@@ -84,7 +84,7 @@ FrameWidgetClass {
           }
           VerticalLayoutWidgetClass "{60B903BF68FEB1F2}" {
            Name "Front"
-           Slot OverlayWidgetSlot {
+           Slot OverlayWidgetSlot "{60B903ABCEE5E446}" {
            }
            {
             HorizontalLayoutWidgetClass "{60B903BD02EBB0AC}" {
@@ -100,13 +100,15 @@ FrameWidgetClass {
                Slot LayoutSlot "{60B903BF68FEB027}" {
                 HorizontalAlign 1
                 VerticalAlign 1
-                Padding 20 0 20 0
+                Padding 20 15 20 15
                }
                Color 0 0 0 1
                Text "015025"
-               "Font Size" 30
+               "Font Size" 45
+               "Min Font Size" 40
                "Horizontal Alignment" Center
                "Vertical Alignment" Center
+               "No Localization" 1
                FontProperties FontProperties "{60B903A779BF369A}" {
                 Font "{CD2634D279AB011A}UI/Fonts/Roboto/Roboto_Bold.fnt"
                }

@@ -1,19 +1,20 @@
 MetaFileClass {
- Name "{21E28AEE1571FD86}gps.xob"
+ Name "{21E28AEE1571FD86}Art/GPS/gps.xob"
  Configurations {
   FBXResourceClass PC {
+   Rotate 0 -90 0
    MaterialAssigns {
     MaterialAssignClass "{60B89C87FEE350F4}" {
      SourceMaterial "gps"
-     AssignedMaterial "{7196620EE509C2B2}Data/gps.emat"
+     AssignedMaterial "{7196620EE509C2B2}Art/GPS/Data/gps.emat"
     }
     MaterialAssignClass "{60B89C87FEE35030}" {
      SourceMaterial "display"
-     AssignedMaterial "{75550F820AF59D1E}Data/display.emat"
+     AssignedMaterial "{75550F820AF59D1E}Art/GPS/Data/display.emat"
     }
     MaterialAssignClass "{60B89C87FEE35036}" {
      SourceMaterial "strap"
-     AssignedMaterial "{FC7EB40A9D6E5C48}Data/strap.emat"
+     AssignedMaterial "{FC7EB40A9D6E5C48}Art/GPS/Data/strap.emat"
     }
    }
    MeshParams {
