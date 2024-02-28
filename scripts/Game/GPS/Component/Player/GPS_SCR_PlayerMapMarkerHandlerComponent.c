@@ -2,8 +2,7 @@
 class GPS_SCR_PlayerGPSHandlerComponentClass : ScriptComponentClass{};
 class GPS_SCR_PlayerGPSHandlerComponent : ScriptComponent
 {
-	protected SCR_PlayerController m_playerController;
-	protected SCR_MapEntity m_mapEntity;
+	protected Widget m_GpsWidget;
 
 	void ~GPS_SCR_PlayerGPSHandlerComponent()
 	{
@@ -17,7 +16,7 @@ class GPS_SCR_PlayerGPSHandlerComponent : ScriptComponent
 		SetEventMask(owner, EntityEvent.INIT);
 		owner.SetFlags(EntityFlags.ACTIVE, true);
 
-		m_mapEntity = SCR_MapEntity.GetMapInstance();
+		SCR_MapEntity m_mapEntity = SCR_MapEntity.GetMapInstance();
 
 		m_mapEntity.GetOnMapOpen().Insert(OnPlayerMapOpen);
 		m_mapEntity.GetOnMapClose().Insert(OnPlayerMapClose);
@@ -27,25 +26,32 @@ class GPS_SCR_PlayerGPSHandlerComponent : ScriptComponent
 	{
 		IEntity playerEnt = GetGame().GetPlayerController().GetControlledEntity();
 		
-		if (!playerEnt)
-			return;
+		if (!playerEnt)  { Print("playerEnt not found"); return; }
 		
 		int gridX, gridZ;
 		vector playerPos = playerEnt.GetOrigin();
 		SCR_MapEntity.GetGridPos(playerPos, gridX: gridX, gridZ: gridZ, resMin: 2, resMax: 4);
-		//string label = SCR_MapEntity.GetGridLabel(playerPos, resMin: 2, resMax: 5, delimiter: ".");
-		Print("playerPos "+ playerPos);
-		Print("gridX "+ gridX);
-		Print("gridZ "+ gridZ);
-		//Print("GetGridLabel "+ label);
+
 		string sGridX = NormalizeToGridFormat(gridX.ToString());
 		string sGridZ = NormalizeToGridFormat(gridZ.ToString());
+
+		// add GPS layout
+		if (!m_GpsWidget) {
+			Widget root = m_mapEntity.GetMapMenuRoot();
+			m_GpsWidget = root.GetWorkspace().CreateWidgets("{AD937E444AC11A45}UI/Layouts/GPS.layout");	
+			Print("created m_GpsWidget "+m_GpsWidget);
+		}
 		
-		Print("sGridX "+ sGridX);
-		Print("sGridZ "+ sGridZ);
+		m_GpsWidget.SetVisible(true);
+		TextWidget txtWgt = TextWidget.Cast(m_GpsWidget.FindAnyWidget("Text"));
+		if (!txtWgt) { Print("txtWgt not found"); return; }
 		
-		
-		// add GPS layout 
+		txtWgt.SetText(sGridX+sGridZ);
+	}
+	
+	protected void OnPlayerMapClose(MapConfiguration config)
+	{
+		m_GpsWidget.SetVisible(false);
 	}
 	
 	private string NormalizeToGridFormat(string grid)
@@ -61,10 +67,5 @@ class GPS_SCR_PlayerGPSHandlerComponent : ScriptComponent
 		}
 		
 		return grid;
-	}
-	
-	protected void OnPlayerMapClose(MapConfiguration config)
-	{
-		// remove GPS layout 
 	}
 }

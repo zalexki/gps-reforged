@@ -1,0 +1,127 @@
+FrameWidgetClass {
+ Name "GPS_Root"
+ "Z Order" 1000
+ {
+  OverlayWidgetClass "{60B903B865D67212}" {
+   Name "OverlayRoot"
+   Slot FrameWidgetSlot "{60B903B865D673C8}" {
+    Anchor 1 1 1 1
+    PositionX -353.566
+    OffsetLeft -353.6
+    PositionY -270.401
+    OffsetTop -270.4
+    SizeX 1927.51
+    OffsetRight -1573.9
+    SizeY 1075.27
+    OffsetBottom -804.9
+    SizeToContent 1
+   }
+   {
+    ImageWidgetClass "{60B903A65414506C}" {
+     Name "Background0"
+     Slot OverlayWidgetSlot {
+      HorizontalAlign 3
+      VerticalAlign 3
+     }
+     Color 0 0 0 1
+     Texture "{02D2F9B394AAA7B0}UI/Textures/Editor/Effects/Effect_Rounded_64x64.edds"
+     Size 64 64
+     "Blend Mode" Blend
+     Progress 0.9
+     "Mask Mode" "Include Below"
+    }
+    VerticalLayoutWidgetClass "{60B903B9DBCB3D9E}" {
+     Name "VerticalLayoutRoot"
+     Slot OverlayWidgetSlot "{60B903B9DBCB3D40}" {
+      HorizontalAlign 3
+      VerticalAlign 3
+      Padding 1 0 1 0
+     }
+     "Fill Origin" Center
+     {
+      HorizontalLayoutWidgetClass "{60B903B9066BCEF6}" {
+       Name "HorizontalLayoutRoot"
+       Slot LayoutSlot "{60B903B9066BCEA4}" {
+        HorizontalAlign 1
+        VerticalAlign 1
+        Padding 5 5 5 5
+        SizeMode Fill
+       }
+       {
+        OverlayWidgetClass "{60B903A6B8F2EA60}" {
+         Name "Overlay0"
+         Slot LayoutSlot "{60B903A6B8F2EBCA}" {
+         }
+         {
+          VerticalLayoutWidgetClass "{60B903A4435EFF86}" {
+           Name "Back"
+           Slot OverlayWidgetSlot "{60B903A4435EFE67}" {
+            HorizontalAlign 3
+            VerticalAlign 3
+           }
+           {
+            HorizontalLayoutWidgetClass "{60B903A4435EFF85}" {
+             Name "HorizontalLayout0"
+             Slot LayoutSlot "{60B903BD2E7EA5AF}" {
+              SizeMode Fill
+             }
+             {
+              ImageWidgetClass "{60B903A4435EFF84}" {
+               Name "Background"
+               Slot LayoutSlot "{60B903BDA7E5B392}" {
+                SizeMode Fill
+               }
+               Color 0.073 0.082 0.035 1
+               Texture "{02D2F9B394AAA7B0}UI/Textures/Editor/Effects/Effect_Rounded_64x64.edds"
+               Size 64 64
+               "Blend Mode" Blend
+               Progress 0.9
+               "Mask Mode" "Include Below"
+              }
+             }
+            }
+           }
+          }
+          VerticalLayoutWidgetClass "{60B903BF68FEB1F2}" {
+           Name "Front"
+           Slot OverlayWidgetSlot {
+           }
+           {
+            HorizontalLayoutWidgetClass "{60B903BD02EBB0AC}" {
+             Name "HorizontalLayout0"
+             Slot LayoutSlot "{60B903BD02EBB01A}" {
+              HorizontalAlign 1
+              VerticalAlign 1
+              SizeMode Fill
+             }
+             {
+              TextWidgetClass "{60B903BF68FEB1F4}" {
+               Name "Text"
+               Slot LayoutSlot "{60B903BF68FEB027}" {
+                HorizontalAlign 1
+                VerticalAlign 1
+                Padding 20 0 20 0
+               }
+               Color 0 0 0 1
+               Text "015025"
+               "Font Size" 30
+               "Horizontal Alignment" Center
+               "Vertical Alignment" Center
+               FontProperties FontProperties "{60B903A779BF369A}" {
+                Font "{CD2634D279AB011A}UI/Fonts/Roboto/Roboto_Bold.fnt"
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

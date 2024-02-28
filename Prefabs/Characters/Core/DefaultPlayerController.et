@@ -3,5 +3,7 @@ SCR_PlayerController {
  components {
   GPS_SCR_PlayerGPSHandlerComponent "{60AAF2339F805042}" {
   }
+  SCR_HUDManagerComponent "{2FDC275D9EBCDB8B}" {
+  }
  }
 }
